@@ -1,0 +1,292 @@
+@media (min-width: 961px) and (max-width: 1140px) {
+    .nav-wrapper,
+    .header-wrapper,
+    .contact-content,
+    .products-section-wrapper {
+        width: 960px;
+    }
+    .contact-details,
+    .contact-details p {
+        padding-right: 25px;
+    }
+    .mobile-nav {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 960px) {
+    .main-nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+    }
+    .header-wrapper,
+    .contact-content,
+    .products-section-wrapper {
+        width: 760px;
+    }
+    .about-wrapper {
+        width: 550px;
+    }
+    .contact-details,
+    .contact-details p {
+        padding-right: 25px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 960px) and (orientation: landscape) {
+    .main-nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+    }
+    .header-wrapper,
+    .contact-content,
+    .products-section-wrapper {
+        width: 760px;
+    }
+    .about-wrapper {
+        width: 550px;
+    }
+    .contact-details,
+    .contact-details p {
+        padding-right: 25px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+    }
+    .mobile-nav-wrapper,
+    .mobile-nav-menu-list-wrapper,
+    .header-wrapper,
+    .contact-content,
+    .products-section-wrapper {
+        width: 600px;
+    }
+    header {
+        height: 80vh;
+    }
+    .header-content h1 {
+        font-size: 43px;
+    }
+    .header-content p {
+        font-size: 24px;
+    }
+    .about-wrapper {
+        width: 400px;
+    }
+    .goods {
+        flex-direction: column;
+    }
+    .service,
+    .quality {
+        width: 100%;
+    }
+    .call-us-now-content h1,
+    .call-us-now-content h2 {
+        font-size: 22px;
+    }
+    .location-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .location-map-wrapper>iframe {
+        height: 400px;
+    }
+    .contact-wrapper {
+        padding: 100px 15px;
+    }
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-details {
+        padding: 0;
+        margin: 0;
+        padding-bottom: 20px;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .contact-form-first-container,
+    .contact-form-second-container {
+        display: flex;
+        flex-direction: column;
+    }
+    #f-name,
+    #l-name,
+    #number,
+    #email {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 599px) {
+    .main-nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+    }
+    .mobile-nav-wrapper,
+    .mobile-nav-menu-list-wrapper,
+    .header-wrapper,
+    .contact-content,
+    .products-section-wrapper {
+        width: 481px;
+    }
+    header {
+        background: url("../images/header-background-phone.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 70vh;
+    }
+    .header-content h1 {
+        font-size: 43px;
+    }
+    .header-content p {
+        font-size: 24px;
+    }
+    .about-wrapper {
+        width: 400px;
+    }
+    .goods {
+        flex-direction: column;
+    }
+    .service,
+    .quality {
+        width: 100%;
+    }
+    .call-us-now-content h1,
+    .call-us-now-content h2 {
+        font-size: 22px;
+    }
+    .location-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .location-map-wrapper>iframe {
+        height: 400px;
+    }
+    .contact-wrapper {
+        padding: 100px 15px;
+    }
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-details {
+        padding: 0;
+        margin: 0;
+        padding-bottom: 20px;
+    }
+    .contact-details h1 {
+        font-size: 28px;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .contact-form-first-container,
+    .contact-form-second-container {
+        display: flex;
+        flex-direction: column;
+    }
+    #f-name,
+    #l-name,
+    #number,
+    #email {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    .main-nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+    }
+    .mobile-nav-wrapper,
+    .mobile-nav-menu-list-wrapper,
+    .header-wrapper,
+    .contact-content,
+    .products-section-wrapper {
+        width: 300px;
+    }
+    header {
+        height: calc(70vh + 100px);
+        background: url("../images/header-background-phone.jpg");
+        background-position: center;
+        background-size: cover;
+        padding: 0 15px;
+    }
+    .header-content h1 {
+        font-size: 43px;
+    }
+    .header-content p {
+        font-size: 24px;
+    }
+    .about-wrapper {
+        width: 280px;
+        padding: 50px 10px;
+        margin: 0 auto;
+    }
+    .goods {
+        flex-direction: column;
+    }
+    .service,
+    .quality {
+        width: 100%;
+        padding: 0;
+    }
+    .call-us-now-content h1,
+    .call-us-now-content h2 {
+        font-size: 20px;
+    }
+    .location-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .location-content h1 {
+        font-size: 22px;
+    }
+    .location-map-wrapper>iframe {
+        height: 400px;
+    }
+    #contact {
+        padding-left: 5px;
+    }
+    .contact-wrapper {
+        padding: 70px 15px;
+    }
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-details {
+        padding: 0;
+        margin: 0;
+        padding-bottom: 20px;
+    }
+    .contact-details h1 {
+        font-size: 28px;
+    }
+    .contact-form-first-container,
+    .contact-form-second-container {
+        display: flex;
+        flex-direction: column;
+    }
+    #f-name,
+    #l-name,
+    #number,
+    #email {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
