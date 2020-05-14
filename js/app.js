@@ -1,7 +1,34 @@
-$(window).ready(function() {
+// Creator : Mohamed Ayoub Elleuch
+// Email: mmdayoub3@gmail.com
+console.log(
+    "Made by: Mohamed Ayoub Elleuch\nEmail: mmdayoub3@gmail.com\nAll Rights Reserved © 2020"
+);
+
+import productsData from "./products.js";
+$(window).ready(() => {
+    //Smooth Scroll
+    $(() => {
+        $("a").on("click", function(event) {
+            const nav = $("nav").height();
+            if (this.hash !== "") {
+                event.preventDefault();
+
+                let hash = this.hash;
+
+                $("html, body").animate({
+                        scrollTop: $(hash).offset().top - nav,
+                    },
+                    800,
+                    function() {
+                        window.location.hash = hash - nav;
+                    }
+                );
+            }
+        });
+    });
     // Main nav //
-    $(function() {
-        $(window).scroll(function() {
+    $(() => {
+        $(window).scroll(() => {
             var scroll = $(window).scrollTop();
             if (scroll > 100) {
                 $(".main-nav").css("background", "white");
@@ -37,36 +64,23 @@ $(window).ready(function() {
             }
         });
     });
-    $(function() {
-        // Mobile nav menu //
-        $(".hamburger-menu-wrapper").click(function() {
+
+    // Mobile nav menu //
+    $(() => {
+        $(".hamburger-menu-wrapper").click(() => {
             $(".mobile-nav-menu-list").slideToggle();
         });
-        $(".mobile-nav-menu-list-wrapper li").click(() => {
+        $(".mobile-nav-menu-list-wrapper li, body > ~").click(() => {
             $(".mobile-nav-menu-list").slideUp();
         });
-        $("body > ~").click(() => {
-            $(".mobile-nav-menu-list").slideUp();
-        });
-    })
+    });
 
-    // Products //
+    // <= Products => //
 
-    // HTTP request to json file
+    // Creating template
     $(function() {
-        let xReq = new XMLHttpRequest();
-        xReq.open("GET", "../json/products.json");
-        xReq.onload = () => {
-            let xData = JSON.parse(xReq.responseText);
-            addHtml(xData);
-        };
-        xReq.send();
-    })
-
-    // Creating template 
-    addHtml = (data) => {
         let html = ``;
-        for (let i of data) {
+        for (let i of productsData) {
             html += `
                     <div class="product-images">
                         <img src="${i.image}">
@@ -89,12 +103,14 @@ $(window).ready(function() {
                     <p> ${i.title} </p>
                 `;
             }
-            $(".products-section-wrapper").append(`<div class="product-wrapper"> ${html} </div>`);
+            $(".products-section-wrapper").append(
+                `<div class="product-wrapper"> ${html} </div>`
+            );
             html = ``;
         }
-        //console.log(html);
 
-        $(function() {
+        // Buttons functionality
+        $(() => {
             // Select all divs with class .product-wrapper
             let products = document
                 .querySelector(".products-section-wrapper")
@@ -116,14 +132,13 @@ $(window).ready(function() {
                     // Iterate in every single button
                     for (let btn of btns) {
                         // Change img source and p text from data attributes of each button on click
-                        btn.addEventListener("click", function(event) {
+                        btn.addEventListener("click", (event) => {
                             img.setAttribute("src", btn.dataset.direction);
                             title.innerHTML = btn.dataset.text;
-                            console.log(btn.dataset.direction);
                         });
                     }
                 }
             }
         });
-    };
+    });
 });
